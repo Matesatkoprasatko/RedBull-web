@@ -269,12 +269,14 @@ button:hover {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 50%;
+    width: 100%;
 }
 
 .ingredients-content {
     display: flex;
     flex-direction: column;
     margin: 40px 0;
+    width: 100%;
 }
 
 .ingredient-item {
@@ -330,11 +332,11 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .andnow h4 {
-    font-size: 30px
+    font-size: 30px;
 }
 
 .andnow span {
@@ -346,7 +348,10 @@ button:hover {
 
 .summer-edition {
     background-color: var(--summer-color);
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .summer-edition .container {
@@ -354,6 +359,7 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
 .summer-edition-content {
@@ -436,4 +442,195 @@ form input, form textarea {
 
 form input:focus, form textarea:focus {
     border: solid 1px var(--redbull-color-2);
+}
+
+@media (max-width: 1024px) {
+    header img {
+        width: 150px;
+    }
+
+    header .button-container {
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .hero-inner {
+        gap: 20px;
+    }
+
+    .hero img {
+        width: 250px;
+    }
+
+    .benefits-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .benefits img {
+        width: 350px;
+    }
+
+    .benefit-card {
+        padding: 20px;
+    }
+
+    .ingredients {
+        min-height: auto;
+        padding-block: 60px;
+    }
+
+    .ingredients-container {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ingredients-content {
+        max-width: 600px;
+        margin: 40px auto;
+    }
+
+    .summer-edition .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .summer-edition-content h1 {
+        font-size: 48px;
+    }
+
+    .summer-edition-content p {
+        font-size: 18px;
+    }
+
+    .summer-edition img {
+        width: 250px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .andnow {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .andnow h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ingredients::before {
+        background-size: 60%;
+        background-position: right;
+    }
+
+    .summer-edition {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-content .button-container {
+        display: none;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .hero-inner {
+        flex-direction: column-reverse;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-inner img {
+        width: 150px;
+    }
+
+    .benefits-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .benefits-container img {
+        width: 300px;
+    }
+
+    .benefits-content h3, .benefits-content h2 {
+        text-align: center;
+    }
+
+    .ingredients {
+        min-height: auto;
+        padding-block: 40px;
+    }
+
+    .ingredients::before {
+        display: none;
+    }
+
+    .ingredients-container {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .ingredients-content {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .ingredient-item {
+        padding: 15px 0;
+    }
+
+    .ingredient-title {
+        gap: 8px;
+    }
+
+    .ingredient-title h6 {
+        font-size: 18px;
+    }
+
+    .ingredient-item p {
+        font-size: 16px;
+    }
+
+    .summer-edition-content h1 {
+        font-size: 36px;
+    }
+
+    .summer-edition img {
+        width: 200px;
+    }
+
+    .andnow h1 {
+        font-size: 36px;
+    }
+
+    .andnow h4 {
+        font-size: 24px;
+    }
+
+    .summer-edition .container {
+        padding: 40px 20px;
+    }
 }
